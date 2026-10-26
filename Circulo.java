@@ -1,13 +1,18 @@
-package p8;
-
 public class Circulo extends Figura {
-	private double r;
-	
-	public Circulo(double r) {
-		this.r=r;
-	}
-	@Override
-	public double CA() {
-		return Math.PI * Math.pow(r, 2);
-	}
+    double radio;
+
+    public Circulo(String nombre, String color, double radio) {
+        super(nombre, color);
+        this.radio = radio;
+    }
+
+    public double calcularArea() {
+        return Math.PI * Math.pow(radio, 2);
+    }
+
+    public void mostrarCirculo() {
+        mostrarInfo();
+        System.out.println("Radio: " + radio);
+        System.out.println("Área: " + calcularArea());
+    }
 }
